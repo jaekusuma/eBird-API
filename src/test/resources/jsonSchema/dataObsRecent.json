@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/Welcome7Element"
+  },
+  "definitions": {
+    "Welcome7Element": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "speciesCode": {
+          "type": "string"
+        },
+        "comName": {
+          "type": "string"
+        },
+        "sciName": {
+          "type": "string"
+        },
+        "locId": {
+          "type": "string"
+        },
+        "locName": {
+          "type": "string"
+        },
+        "obsDt": {
+          "type": "string"
+        },
+        "howMany": {
+          "type": "integer"
+        },
+        "lat": {
+          "type": "number"
+        },
+        "lng": {
+          "type": "number"
+        },
+        "obsValid": {
+          "type": "boolean"
+        },
+        "obsReviewed": {
+          "type": "boolean"
+        },
+        "locationPrivate": {
+          "type": "boolean"
+        },
+        "subId": {
+          "type": "string"
+        },
+        "exoticCategory": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "comName",
+        "lat",
+        "lng",
+        "locId",
+        "locName",
+        "locationPrivate",
+        "obsDt",
+        "obsReviewed",
+        "obsValid",
+        "sciName",
+        "speciesCode",
+        "subId"
+      ],
+      "title": "Welcome7Element"
+    }
+  }
+}
