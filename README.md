@@ -34,7 +34,7 @@
 
 1. Clone the repository
 ```bash
-  $ git clone https://github.com/ProjectBengcall/API-Testing.git
+  $ git clone https://github.com/jaekusuma/eBird-API.git
 ```
 2. Open  this Project Repository on Intellij IDE and Run this on the IDE terminal
 
