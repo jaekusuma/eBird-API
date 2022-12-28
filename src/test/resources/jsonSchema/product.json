@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/Welcome4Element"
+    },
+    "definitions": {
+        "Welcome4Element": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "profileHandle": {
+                    "type": "string"
+                },
+                "userDisplayName": {
+                    "type": "string"
+                },
+                "numSpecies": {
+                    "type": "integer"
+                },
+                "numCompleteChecklists": {
+                    "type": "integer"
+                },
+                "rowNum": {
+                    "type": "integer"
+                },
+                "userId": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "numCompleteChecklists",
+                "numSpecies",
+                "profileHandle",
+                "rowNum",
+                "userDisplayName",
+                "userId"
+            ],
+            "title": "Welcome4Element"
+        }
+    }
+}
