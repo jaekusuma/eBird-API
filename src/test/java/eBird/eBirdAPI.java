@@ -13,4 +13,7 @@ public class eBirdAPI {
     public static final String RECENT_NEARBY_NOTABLE = URL + "/data/obs/geo/recent/notable?lat={lat}&lng={lng}";
     public static final String RECENT_CHECKLIST = URL + "/product/lists/{regionCode}";
     public static final String HISTORY_OBS_DATE = URL + "/data/obs/{regionCode}/historic/{y}/{m}/{d}";
+    public static final String PRODUCT_TOP = URL + "/product/top100/{regionCode}/{y}/{m}/{d}";
+    public static final String PRODUCT_CHECKLIST = URL + "/product/lists/{regionCode}/{y}/{m}/{d}";
+    public static final String PRODUCT_STAT = URL +"/product/stats/{regionCode}/{y}/{m}/{d}";
 }

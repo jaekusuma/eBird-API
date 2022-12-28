@@ -1,0 +1,123 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/Welcome7Element"
+    },
+    "definitions": {
+        "Welcome7Element": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "locId": {
+                    "type": "string"
+                },
+                "subId": {
+                    "type": "string"
+                },
+                "userDisplayName": {
+                    "type": "string"
+                },
+                "numSpecies": {
+                    "type": "integer"
+                },
+                "obsDt": {
+                    "type": "string"
+                },
+                "obsTime": {
+                    "type": "string"
+                },
+                "subID": {
+                    "type": "string"
+                },
+                "loc": {
+                    "$ref": "#/definitions/LOC"
+                }
+            },
+            "required": [
+                "loc",
+                "locId",
+                "numSpecies",
+                "obsDt",
+                "obsTime",
+                "subID",
+                "subId",
+                "userDisplayName"
+            ],
+            "title": "Welcome7Element"
+        },
+        "LOC": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "locId": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "latitude": {
+                    "type": "number"
+                },
+                "longitude": {
+                    "type": "number"
+                },
+                "countryCode": {
+                    "type": "string"
+                },
+                "countryName": {
+                    "type": "string"
+                },
+                "subnational1Name": {
+                    "type": "string"
+                },
+                "subnational1Code": {
+                    "type": "string"
+                },
+                "subnational2Code": {
+                    "type": "string"
+                },
+                "subnational2Name": {
+                    "type": "string"
+                },
+                "isHotspot": {
+                    "type": "boolean"
+                },
+                "hierarchicalName": {
+                    "type": "string"
+                },
+                "locName": {
+                    "type": "string"
+                },
+                "lat": {
+                    "type": "number"
+                },
+                "lng": {
+                    "type": "number"
+                },
+                "locID": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "countryCode",
+                "countryName",
+                "hierarchicalName",
+                "isHotspot",
+                "lat",
+                "latitude",
+                "lng",
+                "locID",
+                "locId",
+                "locName",
+                "longitude",
+                "name",
+                "subnational1Code",
+                "subnational1Name",
+                "subnational2Code",
+                "subnational2Name"
+            ],
+            "title": "LOC"
+        }
+    }
+}
