@@ -2,14 +2,8 @@ package eBird.steps;
 
 import eBird.action;
 import io.cucumber.java.en.*;
-import net.serenitybdd.rest.SerenityRest;
-
-import java.io.File;
-
-import static com.google.common.base.CharMatcher.isNot;
 import static eBird.responseAPI.*;
 import static eBird.eBirdAPI.*;
-import static org.hamcrest.CoreMatchers.containsString;
 
 public class dataObsSteps {
     @Given("Get recent observation in a region with region code {string}")
@@ -34,8 +28,7 @@ public class dataObsSteps {
 
     @And("Validate Json Schema")
     public void validateJsonSchema() {
-        File json = new File(JSON_SCHEMA+"/dataObsRecent.json");
-        action.jsonSchemaValidate(json);
+        action.jsonSchemaValidate("/dataObsRecent.json");
     }
 
     @When("Send get Recent notable observations in a region")
@@ -123,8 +116,7 @@ public class dataObsSteps {
 
     @And("Validate Recent checklists feed Json Schema")
     public void validateRecentChecklistsFeedJsonSchema() {
-        File json = new File(JSON_SCHEMA + "/dataObsRecentChecklist.json");
-        action.jsonSchemaValidate(json);
+        action.jsonSchemaValidate("/dataObsRecentChecklist.json");
     }
 
     @Given("Get Historic observations of a region code {string} in year {string} month {string} day {string}")

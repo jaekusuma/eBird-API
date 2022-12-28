@@ -52,7 +52,8 @@ public class action {
     public static void responContainsString(String response){
         SerenityRest.then().body(containsString(response));
     }
-    public static void jsonSchemaValidate(File json){
+    public static void jsonSchemaValidate(String path){
+    	File json = new File(JSON_SCHEMA + path);
         SerenityRest.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 }
