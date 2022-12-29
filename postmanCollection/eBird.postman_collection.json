@@ -1,0 +1,1625 @@
+{
+	"info": {
+		"_postman_id": "e19c3617-8b6d-4e98-9439-36890a527783",
+		"name": "eBird",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23670046"
+	},
+	"item": [
+		{
+			"name": "data/obs",
+			"item": [
+				{
+					"name": "Recent observations in a region",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"speciesCode\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"comName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"sciName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locId\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsDt\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"howMany\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lat\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lng\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsValid\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsReviewed\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locationPrivate\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"subId\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/data/obs/{{regionCode}}/recent",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"data",
+								"obs",
+								"{{regionCode}}",
+								"recent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recent notable observations in a region",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"speciesCode\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"comName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"sciName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locId\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsDt\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"howMany\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lat\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lng\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsValid\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsReviewed\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locationPrivate\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"subId\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/data/obs/{{regionCode}}/recent/notable",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"data",
+								"obs",
+								"{{regionCode}}",
+								"recent",
+								"notable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recent observations of a species in a region",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"speciesCode\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"comName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"sciName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locId\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsDt\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"howMany\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lat\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lng\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsValid\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsReviewed\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locationPrivate\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"subId\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/data/obs/{{regionCode}}/recent/{{speciesCode}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"data",
+								"obs",
+								"{{regionCode}}",
+								"recent",
+								"{{speciesCode}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recent nearby observations",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"speciesCode\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"comName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"sciName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locId\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsDt\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"howMany\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lat\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lng\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsValid\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsReviewed\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locationPrivate\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"subId\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/data/obs/geo/recent?lat={{lat}}&lng={{lng}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"data",
+								"obs",
+								"geo",
+								"recent"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "{{lat}}"
+								},
+								{
+									"key": "lng",
+									"value": "{{lng}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recent nearby observations of a species",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"speciesCode\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"comName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"sciName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locId\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsDt\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"howMany\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lat\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lng\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsValid\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsReviewed\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locationPrivate\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"subId\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/data/obs/geo/recent/{{speciesCode}}?lat={{lat}}&lng={{lng}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"data",
+								"obs",
+								"geo",
+								"recent",
+								"{{speciesCode}}"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "{{lat}}"
+								},
+								{
+									"key": "lng",
+									"value": "{{lng}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nearest observations of a species",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"speciesCode\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"comName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"sciName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locId\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsDt\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"howMany\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lat\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lng\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsValid\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsReviewed\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locationPrivate\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"subId\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/data/nearest/geo/recent/{{speciesCode}}?lat={{lat}}&lng={{lng}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"data",
+								"nearest",
+								"geo",
+								"recent",
+								"{{speciesCode}}"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "{{lat}}"
+								},
+								{
+									"key": "lng",
+									"value": "{{lng}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recent nearby notable observations",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"speciesCode\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"comName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"sciName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locId\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsDt\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"howMany\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lat\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lng\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsValid\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsReviewed\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locationPrivate\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"subId\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/data/obs/geo/recent/notable?lat={{lat}}&lng={{lng}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"data",
+								"obs",
+								"geo",
+								"recent",
+								"notable"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "{{lat}}"
+								},
+								{
+									"key": "lng",
+									"value": "{{lng}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recent checklists feed",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"locId\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"subId\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"userDisplayName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"numSpecies\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsTime\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsDt\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"subID\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"loc\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/product/lists/{{regionCode}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"product",
+								"lists",
+								"{{regionCode}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Historic observations on a date",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"speciesCode\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"comName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"sciName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locId\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsDt\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"howMany\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lat\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lng\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsValid\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsReviewed\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locationPrivate\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"subId\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/data/obs/{{regionCode}}/historic/{{y}}/{{m}}/{{d}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"data",
+								"obs",
+								"{{regionCode}}",
+								"historic",
+								"{{y}}",
+								"{{m}}",
+								"{{d}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "Top 100",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"profileHandle\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"userDisplayName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"numSpecies\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"numCompleteChecklists\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"rowNum\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"userId\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/product/top100/{{regionCode}}/{{y}}/{{m}}/{{d}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"product",
+								"top100",
+								"{{regionCode}}",
+								"{{y}}",
+								"{{m}}",
+								"{{d}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Checklist feed on a date",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"locId\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"subId\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"userDisplayName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"numSpecies\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsTime\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"obsDt\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"subID\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"loc\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/product/lists/{{regionCode}}/{{y}}/{{m}}/{{d}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"product",
+								"lists",
+								"{{regionCode}}",
+								"{{y}}",
+								"{{m}}",
+								"{{d}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regional statistics on a date",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"numChecklists\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"numContributors\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"numSpecies\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/product/stats/{{regionCode}}/{{y}}/{{m}}/{{d}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"product",
+								"stats",
+								"{{regionCode}}",
+								"{{y}}",
+								"{{m}}",
+								"{{d}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Species List for a Region",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"soucas1\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/product/spplist/{{regionCode}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"product",
+								"spplist",
+								"{{regionCode}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Checklist",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"projId\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"subId\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"protocolId\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/product/checklist/view/{{subId}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"product",
+								"checklist",
+								"view",
+								"{{subId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ref/geo",
+			"item": [
+				{
+					"name": "Adjacent Regions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"code\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/ref/adjacent/{{regionCode}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ref",
+								"adjacent",
+								"{{regionCode}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ref/hotspot",
+			"item": [
+				{
+					"name": "Hotspots in a region",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"L3088672\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/ref/hotspot/{{regionCode}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ref",
+								"hotspot",
+								"{{regionCode}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nearby hotspots",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"ID\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/ref/hotspot/geo?lat={{lat}}&lng={{lng}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ref",
+								"hotspot",
+								"geo"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "{{lat}}"
+								},
+								{
+									"key": "lng",
+									"value": "{{lng}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hotspot Info",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"locId\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"latitude\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"longitude\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"countryCode\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"countryName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"subnational1Name\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"subnational1Code\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"subnational2Code\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"subnational2Name\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locID\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"locName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lat\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lng\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"hierarchicalName\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/ref/hotspot/info/{{locId}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ref",
+								"hotspot",
+								"info",
+								"{{locId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ref/taxonomy",
+			"item": [
+				{
+					"name": "eBird Taxonomy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"SCIENTIFIC_NAME\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/ref/taxonomy/ebird",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ref",
+								"taxonomy",
+								"ebird"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Taxonomic Forms",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"yevbul\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/ref/taxon/forms/{{speciesCode}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ref",
+								"taxon",
+								"forms",
+								"{{speciesCode}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Taxa Locale Codes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"code\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lastUpdate\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/ref/taxa-locales/ebird",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ref",
+								"taxa-locales",
+								"ebird"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Taxonomy Versions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"authorityVer\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"latest\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/ref/taxonomy/versions",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ref",
+								"taxonomy",
+								"versions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Taxonomic Groups",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"groupName\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"groupOrder\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/ref/sppgroup/{{speciesGrouping}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ref",
+								"sppgroup",
+								"{{speciesGrouping}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ref/region",
+			"item": [
+				{
+					"name": "Region Info",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"result\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/ref/region/info/{{regionCode}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ref",
+								"region",
+								"info",
+								"{{regionCode}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sub Region List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"code\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "q4cigmta8k96",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "x-ebirdapitoken",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/ref/region/list/{{regionType}}/{{parentRegionCode}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ref",
+								"region",
+								"list",
+								"{{regionType}}",
+								"{{parentRegionCode}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
