@@ -4,8 +4,7 @@ import io.restassured.module.jsv.JsonSchemaValidator;
 import net.serenitybdd.rest.SerenityRest;
 import java.io.File;
 import static eBird.eBirdAPI.*;
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.hasItem;
+import static org.hamcrest.Matchers.*;
 
 public class action {
     public static void givenRegion(String regionCode){
@@ -63,6 +62,12 @@ public class action {
     			.header("x-ebirdapitoken",API_KEY)
     			.pathParam("speciesGrouping", speciesGrouping);
     }
+    public static void givenTypeSub(String regionType, String parentRegionCode) {
+    	SerenityRest.given()
+    			.header("x-ebirdapitoken",API_KEY)
+    			.pathParam("regionType", regionType)
+    			.pathParam("parentRegionCode", parentRegionCode);
+    }
     public static void whenSend(String send){
         SerenityRest.when().get(send);
     }
@@ -71,6 +76,9 @@ public class action {
     }
     public static void responBodyContains(String actual, String expected){
         SerenityRest.then().body(actual, hasItem(expected));
+    }
+    public static void responBodyEqual(String actual, String expected){
+        SerenityRest.then().body(actual, equalTo(expected));
     }
     public static void responContainsString(String response){
         SerenityRest.then().body(containsString(response));

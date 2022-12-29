@@ -27,4 +27,6 @@ public class eBirdAPI {
     public static final String TAXONOMY_TAXA = URL + "/ref/taxa-locales/ebird";
     public static final String TAXONOMY_VERSION = URL + "/ref/taxonomy/versions";
     public static final String TAXONOMY_GROUP = URL + "/ref/sppgroup/{speciesGrouping}";
+    public static final String REGION_INFO = URL + "/ref/region/info/{regionCode}";
+    public static final String REGION_SUB = URL + "/ref/region/list/{regionType}/{parentRegionCode}";
 }
