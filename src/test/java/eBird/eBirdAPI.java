@@ -25,4 +25,6 @@ public class eBirdAPI {
     public static final String TAXONOMY_EBIRD = URL + "/ref/taxonomy/ebird";
     public static final String TAXONOMY_FORM = URL + "/ref/taxon/forms/{speciesCode}";
     public static final String TAXONOMY_TAXA = URL + "/ref/taxa-locales/ebird";
+    public static final String TAXONOMY_VERSION = URL + "/ref/taxonomy/versions";
+    public static final String TAXONOMY_GROUP = URL + "/ref/sppgroup/{speciesGrouping}";
 }

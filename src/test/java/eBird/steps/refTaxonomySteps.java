@@ -51,4 +51,40 @@ public class refTaxonomySteps {
 	public void validateTaxaLocaleCodesFormsJsonSchema() {
 		action.jsonSchemaValidate("/refTaxTaxa.json");
 	}
+
+	@Given("Get Taxonomy Versions")
+	public void getTaxonomyVersions() {
+		action.givenToken();
+	}
+
+	@When("Send Taxonomy Versions")
+	public void sendTaxonomyVersions() {
+		action.whenSend(TAXONOMY_VERSION);
+	}
+
+	@And("Response Body Return {string} {string}")
+	public void responseBodyReturn(String arg1, String arg2) {
+		action.responContainsString(arg1);
+		action.responContainsString(arg2);
+	}
+
+	@And("validate Taxonomy Versions Json Schema")
+	public void validateTaxonomyVersionsJsonSchema() {
+		action.jsonSchemaValidate("/refTaxVersion.json");
+	}
+
+	@Given("Get Taxonomic Groups with species group {string}")
+	public void getTaxonomicGroupsWithSpeciesGroup(String arg1) {
+		action.givenTaxGroup(arg1);
+	}
+
+	@When("Send Taxonomic Groups")
+	public void sendTaxonomicGroups() {
+		action.whenSend(TAXONOMY_GROUP);
+	}
+
+	@And("validate Taxonomic Groups Json Schema")
+	public void validateTaxonomicGroupsJsonSchema() {
+		action.jsonSchemaValidate("/refTaxGroup.json");
+	}
 }

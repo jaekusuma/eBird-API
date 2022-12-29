@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/Welcome5Element"
+    },
+    "definitions": {
+        "Welcome5Element": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "authorityVer": {
+                    "type": "number"
+                },
+                "latest": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "authorityVer",
+                "latest"
+            ],
+            "title": "Welcome5Element"
+        }
+    }
+}

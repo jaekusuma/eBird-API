@@ -20,3 +20,17 @@ Feature: end point ref/taxonomy
     Then Status Code Should Be 200 OK
     And Response Body Return "code" "name" and "lastUpdate"
     And validate Taxa Locale Codes Forms Json Schema
+
+  Scenario: Taxonomy Versions
+    Given Get Taxonomy Versions
+    When Send Taxonomy Versions
+    Then Status Code Should Be 200 OK
+    And Response Body Return "authorityVer" "latest"
+    And validate Taxonomy Versions Json Schema
+
+  Scenario: Taxonomic Groups
+    Given Get Taxonomic Groups with species group "merlin"
+    When Send Taxonomic Groups
+    Then Status Code Should Be 200 OK
+    And Response Body Return "groupName" "groupOrder" and "taxonOrderBounds"
+    And validate Taxonomic Groups Json Schema

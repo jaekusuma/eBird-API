@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/Welcome2Element"
+    },
+    "definitions": {
+        "Welcome2Element": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "groupName": {
+                    "type": "string"
+                },
+                "groupOrder": {
+                    "type": "integer"
+                },
+                "taxonOrderBounds": {
+                    "type": "array",
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "number"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "groupName",
+                "groupOrder",
+                "taxonOrderBounds"
+            ],
+            "title": "Welcome2Element"
+        }
+    }
+}

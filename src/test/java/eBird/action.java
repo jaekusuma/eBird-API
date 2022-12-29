@@ -58,6 +58,11 @@ public class action {
     			.header("x-ebirdapitoken",API_KEY)
     			.pathParam("speciesCode", speciesCode);
     }
+    public static void givenTaxGroup(String speciesGrouping) {
+    	SerenityRest.given()
+    			.header("x-ebirdapitoken",API_KEY)
+    			.pathParam("speciesGrouping", speciesGrouping);
+    }
     public static void whenSend(String send){
         SerenityRest.when().get(send);
     }
