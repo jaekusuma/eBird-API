@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/Welcome7Element"
+    },
+    "definitions": {
+        "Welcome7Element": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "lastUpdate": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "code",
+                "lastUpdate",
+                "name"
+            ],
+            "title": "Welcome7Element"
+        }
+    }
+}
