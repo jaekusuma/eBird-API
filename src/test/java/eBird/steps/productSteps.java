@@ -2,8 +2,6 @@ package eBird.steps;
 
 import eBird.action;
 import io.cucumber.java.en.*;
-import java.io.File;
-import static eBird.responseAPI.*;
 import static eBird.eBirdAPI.*;
 
 public class productSteps {
@@ -56,4 +54,39 @@ public class productSteps {
     public void validateRegStatJson() {
     	action.jsonSchemaValidate("/productStat.json");
     }
+
+	@Given("Get Species List for a Region {string}")
+	public void getSpeciesListForARegion(String arg1){
+		action.givenRegion(arg1);
+	}
+
+	@When("Send Species List for a Region")
+	public void sendSpeciesListForARegion() {
+		action.whenSend(PRODUCT_SPESLIST);
+	}
+
+	@And("Validate Species List for a Region Json Schema")
+	public void validateSpeciesListForARegionJsonSchema() {
+		action.jsonSchemaValidate("/productSpecies.json");
+	}
+
+	@Given("Get View Checklist by subId {string}")
+	public void getViewChecklistBySubId(String arg1) {
+		action.givenSubId(arg1);
+	}
+
+	@When("Send View Checklist")
+	public void sendViewChecklist() {
+		action.whenSend(PRODUCT_VIEW_CHECKLIST);
+	}
+
+	@And("Response Body Return subId {string}")
+	public void responseBodyReturnSubId(String arg1) {
+		action.responContainsString(arg1);
+	}
+
+	@And("Validate View Checklist Json Schema")
+	public void validateViewChecklistJsonSchema() {
+		action.jsonSchemaValidate("/productViewCheck.json");
+	}
 }
