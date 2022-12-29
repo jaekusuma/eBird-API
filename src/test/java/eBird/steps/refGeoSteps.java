@@ -4,7 +4,7 @@ import eBird.action;
 import static eBird.eBirdAPI.*;
 import io.cucumber.java.en.*;
 
-public class refGeo {
+public class refGeoSteps {
 	@Given("Get Adjacent Regions {string}")
 	public void getAdjacentRegions(String regionCode) {
 		action.givenRegion(regionCode);
