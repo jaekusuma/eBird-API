@@ -22,4 +22,9 @@ public class eBirdAPI {
     public static final String HOTSPOT_REGION = URL + "/ref/hotspot/{regionCode}";
     public static final String HOTSPOT_NEARBY = URL + "/ref/hotspot/geo?lat={lat}&lng={lng}";
     public static final String HOTSPOT_INFO = URL + "/ref/hotspot/info/{locId}";
+    public static final String TAXONOMY_EBIRD = URL + "/ref/taxonomy/ebird";
+    public static final String TAXONOMY_FORM = URL + "/ref/taxon/forms/{speciesCode}";
+    public static final String TAXONOMY_TAXA = URL + "/ref/taxa-locales/ebird";
+    public static final String TAXONOMY_VERSION = URL + "/ref/taxonomy/versions";
+    public static final String TAXONOMY_GROUP = URL + "/ref/sppgroup/{speciesGrouping}";
 }

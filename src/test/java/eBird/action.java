@@ -50,6 +50,19 @@ public class action {
                 .header("x-ebirdapitoken", API_KEY)
                 .pathParam("locId",locId);
     }
+    public static void givenToken() {
+    	SerenityRest.given().header("x-ebirdapitoken", API_KEY);
+    }
+    public static void givenSpeciesCode(String speciesCode) {
+    	SerenityRest.given()
+    			.header("x-ebirdapitoken",API_KEY)
+    			.pathParam("speciesCode", speciesCode);
+    }
+    public static void givenTaxGroup(String speciesGrouping) {
+    	SerenityRest.given()
+    			.header("x-ebirdapitoken",API_KEY)
+    			.pathParam("speciesGrouping", speciesGrouping);
+    }
     public static void whenSend(String send){
         SerenityRest.when().get(send);
     }
