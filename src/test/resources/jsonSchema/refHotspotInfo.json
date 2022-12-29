@@ -1,0 +1,79 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome6",
+    "definitions": {
+        "Welcome6": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "locId": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "latitude": {
+                    "type": "number"
+                },
+                "longitude": {
+                    "type": "number"
+                },
+                "countryCode": {
+                    "type": "string"
+                },
+                "countryName": {
+                    "type": "string"
+                },
+                "subnational1Name": {
+                    "type": "string"
+                },
+                "subnational1Code": {
+                    "type": "string"
+                },
+                "subnational2Code": {
+                    "type": "string"
+                },
+                "subnational2Name": {
+                    "type": "string"
+                },
+                "isHotspot": {
+                    "type": "boolean"
+                },
+                "locName": {
+                    "type": "string"
+                },
+                "lat": {
+                    "type": "number"
+                },
+                "lng": {
+                    "type": "number"
+                },
+                "hierarchicalName": {
+                    "type": "string"
+                },
+                "locID": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "countryCode",
+                "countryName",
+                "hierarchicalName",
+                "isHotspot",
+                "lat",
+                "latitude",
+                "lng",
+                "locID",
+                "locId",
+                "locName",
+                "longitude",
+                "name",
+                "subnational1Code",
+                "subnational1Name",
+                "subnational2Code",
+                "subnational2Name"
+            ],
+            "title": "Welcome6"
+        }
+    }
+}

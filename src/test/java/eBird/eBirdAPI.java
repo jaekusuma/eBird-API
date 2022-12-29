@@ -19,4 +19,7 @@ public class eBirdAPI {
     public static final String PRODUCT_SPESLIST = URL + "/product/spplist/{regionCode}";
     public static final String PRODUCT_VIEW_CHECKLIST = URL + "/product/checklist/view/{subId}";
     public static final String GEO_ADJACENT = URL + "/ref/adjacent/{regionCode}";
+    public static final String HOTSPOT_REGION = URL + "/ref/hotspot/{regionCode}";
+    public static final String HOTSPOT_NEARBY = URL + "/ref/hotspot/geo?lat={lat}&lng={lng}";
+    public static final String HOTSPOT_INFO = URL + "/ref/hotspot/info/{locId}";
 }

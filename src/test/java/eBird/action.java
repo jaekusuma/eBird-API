@@ -45,6 +45,11 @@ public class action {
                 .header("x-ebirdapitoken", API_KEY)
                 .pathParam("subId",subId);
     }
+    public static void givenLocId(String locId){
+        SerenityRest.given()
+                .header("x-ebirdapitoken", API_KEY)
+                .pathParam("locId",locId);
+    }
     public static void whenSend(String send){
         SerenityRest.when().get(send);
     }

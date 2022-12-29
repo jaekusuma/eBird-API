@@ -33,7 +33,7 @@ public class productSteps {
     public void sendChecklist() {
     	action.whenSend(PRODUCT_CHECKLIST);
     }
-    @And("Response Body Return {} and {}")
+    @And("Response Body Return {string} and {string}")
     public void responseBodyReturn(String locId, String obsDt) {
     	action.responContainsString(locId);
     	action.responContainsString(obsDt);
