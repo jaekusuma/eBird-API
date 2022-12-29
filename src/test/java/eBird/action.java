@@ -40,6 +40,11 @@ public class action {
                 .pathParam("m",month)
                 .pathParam("d", day);
     }
+    public static void givenSubId(String subId){
+        SerenityRest.given()
+                .header("x-ebirdapitoken", API_KEY)
+                .pathParam("subId",subId);
+    }
     public static void whenSend(String send){
         SerenityRest.when().get(send);
     }

@@ -16,4 +16,6 @@ public class eBirdAPI {
     public static final String PRODUCT_TOP = URL + "/product/top100/{regionCode}/{y}/{m}/{d}";
     public static final String PRODUCT_CHECKLIST = URL + "/product/lists/{regionCode}/{y}/{m}/{d}";
     public static final String PRODUCT_STAT = URL +"/product/stats/{regionCode}/{y}/{m}/{d}";
+    public static final String PRODUCT_SPESLIST = URL + "/product/spplist/{regionCode}";
+    public static final String PRODUCT_VIEW_CHECKLIST = URL + "/product/checklist/view/{subId}";
 }

@@ -1,0 +1,183 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome8",
+    "definitions": {
+        "Welcome8": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "projId": {
+                    "type": "string"
+                },
+                "subId": {
+                    "type": "string"
+                },
+                "protocolId": {
+                    "type": "string"
+                },
+                "locId": {
+                    "type": "string"
+                },
+                "durationHrs": {
+                    "type": "number"
+                },
+                "allObsReported": {
+                    "type": "boolean"
+                },
+                "comments": {
+                    "type": "string"
+                },
+                "creationDt": {
+                    "type": "string"
+                },
+                "lastEditedDt": {
+                    "type": "string"
+                },
+                "obsDt": {
+                    "type": "string"
+                },
+                "obsTimeValid": {
+                    "type": "boolean"
+                },
+                "checklistId": {
+                    "type": "string"
+                },
+                "numObservers": {
+                    "type": "integer"
+                },
+                "subnational1Code": {
+                    "type": "string"
+                },
+                "submissionMethodCode": {
+                    "type": "string"
+                },
+                "userDisplayName": {
+                    "type": "string"
+                },
+                "subAux": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/SubAux"
+                    }
+                },
+                "subAuxAi": {
+                    "type": "array",
+                    "items": {}
+                },
+                "obs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Ob"
+                    }
+                }
+            },
+            "required": [
+                "allObsReported",
+                "checklistId",
+                "comments",
+                "creationDt",
+                "durationHrs",
+                "lastEditedDt",
+                "locId",
+                "numObservers",
+                "obs",
+                "obsDt",
+                "obsTimeValid",
+                "projId",
+                "protocolId",
+                "subAux",
+                "subAuxAi",
+                "subId",
+                "submissionMethodCode",
+                "subnational1Code",
+                "userDisplayName"
+            ],
+            "title": "Welcome8"
+        },
+        "Ob": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "speciesCode": {
+                    "type": "string"
+                },
+                "hideFlags": {
+                    "type": "array",
+                    "items": {}
+                },
+                "obsDt": {
+                    "type": "string"
+                },
+                "subnational1Code": {
+                    "type": "string"
+                },
+                "howManyAtleast": {
+                    "type": "integer"
+                },
+                "howManyAtmost": {
+                    "type": "integer"
+                },
+                "comments": {
+                    "type": "string"
+                },
+                "howManyStr": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "subId": {
+                    "type": "string"
+                },
+                "projId": {
+                    "type": "string"
+                },
+                "obsId": {
+                    "type": "string"
+                },
+                "present": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "comments",
+                "hideFlags",
+                "howManyAtleast",
+                "howManyAtmost",
+                "howManyStr",
+                "obsDt",
+                "obsId",
+                "present",
+                "projId",
+                "speciesCode",
+                "subId",
+                "subnational1Code"
+            ],
+            "title": "Ob"
+        },
+        "SubAux": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "subId": {
+                    "type": "string"
+                },
+                "fieldName": {
+                    "type": "string"
+                },
+                "entryMethodCode": {
+                    "type": "string"
+                },
+                "auxCode": {
+                    "type": "string",
+                    "format": "integer"
+                }
+            },
+            "required": [
+                "auxCode",
+                "entryMethodCode",
+                "fieldName",
+                "subId"
+            ],
+            "title": "SubAux"
+        }
+    }
+}
